@@ -1,0 +1,22 @@
+.services {
+    padding: 50px;
+    background-color: white;
+    text-align: center;
+    color: #1e3a8a;
+  }
+  
+  .services ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .services ul li {
+    margin: 10px 0;
+    font-size: 18px;
+  }
+  
+  @media (max-width: 768px) {
+    .services {
+      padding: 30px;
+    }       
+  }  
