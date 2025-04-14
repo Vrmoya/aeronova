@@ -6,9 +6,10 @@ export const Services = () => {
     <div className="services">
       <h2>Nuestros Servicios</h2>
       <ul>
-        <li>Diseño de helipuertos</li>
-        <li>Construcción de pistas</li>
-        <li>Mantenimiento especializado</li>
+        <li>Helipuertos</li>
+        <li>Aerodromos</li>
+        <li>Vant</li>
+        <li>Consultoria</li>
       </ul>
     </div>
   );

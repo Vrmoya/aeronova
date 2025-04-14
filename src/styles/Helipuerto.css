@@ -1,0 +1,47 @@
+.helipuerto {
+    position: relative;
+    z-index: 1;
+    height: auto;
+    width: 100%;
+    text-align: center;
+    padding: 50px;
+   /*background-color: #f0f9ff;*/
+   color: #000000;
+  }
+  
+  .helipuerto::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("../public/images/fondo_helipuerto.webp");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.2;
+    z-index: -1;
+  }
+  .helipuerto ul {
+    
+    text-align: left;
+    padding-left: 1.5rem; /* asegura sangría de lista */
+    list-style-type: disc;
+  }
+  
+  /* Opcional: margenes entre items de la lista */
+  .helipuerto ul li {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+  }
+  h1{
+    font-size: 3rem;
+  }
+  h3{
+    font-size: 1.5rem;
+        text-align: left;
+        padding-top: 1rem;
+        padding-left: 1.5rem;
+        padding-bottom: 1rem;
+  }

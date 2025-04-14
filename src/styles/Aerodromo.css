@@ -1,0 +1,36 @@
+.aerodromo {
+    text-align: center;
+    padding: 50px;
+    background-color: #f0f9ff;
+    color: #1e3a8a;
+  }
+ /* Carrusel: imágenes del mismo tamaño */
+.carousel .slide img {
+    height: 500px; /* ajusta según lo que necesites */
+    width: 100%;
+    object-fit: contain; /* puedes usar 'contain' si quieres que quepa todo */
+  }
+  
+  /* Lista alineada a la izquierda */
+  .aerodromo ul {
+    
+    text-align: left;
+    padding-left: 1.5rem; /* asegura sangría de lista */
+    list-style-type: disc;
+  }
+  
+  /* Opcional: margenes entre items de la lista */
+  .aerodromo ul li {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+  }
+  h1{
+    font-size: 3rem;
+  }
+  h3{
+    font-size: 1.5rem;
+        text-align: left;
+        padding-top: 1rem;
+        padding-left: 1.5rem;
+        padding-bottom: 1rem;
+  }
