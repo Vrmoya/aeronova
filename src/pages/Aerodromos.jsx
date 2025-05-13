@@ -28,7 +28,7 @@ export const Aerodromos = () => {
         </div>
       </Carousel>
 
-      <h3>Realizamos:</h3>
+      <h3>Realizamos proyectos publicos y/o privados:</h3>
       <ul>
         <li>Estudios de factibilidad, proyecto ejecutivo, confección de la documentación aeronáutica.</li>
         <li>Proyectos de ampliación o modificación de pistas, plataformas o rodajes.</li>
@@ -37,6 +37,7 @@ export const Aerodromos = () => {
         <li>Plan de mantenimiento.</li>
         <li>Plano de aeródromo, plano tipo A, tipo B, plano de atraque de aeronaves.</li>
         <li>Relevamientos de obstáculos, datos electrónicos de terreno.</li>
+        <li>Aerodromos Agroaereos</li>
       </ul>
     </div>
   );

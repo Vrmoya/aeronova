@@ -1,0 +1,14 @@
+.lad-ladh {
+    height: auto;
+    width: 100%;
+    color: var(--color-texto);
+    padding: 3rem 2rem;
+    height: auto;
+    width: 50%;
+    background-image: url("../public/images/fondolad.jpg");
+    background-size:contain;
+    opacity: 0.9;
+    background-repeat: no-repeat;
+    background-position: center; 
+  }
+  

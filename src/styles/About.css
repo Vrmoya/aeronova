@@ -1,0 +1,40 @@
+.about {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    padding: 3rem 2rem;
+  }
+  
+  .about h1 {
+    font-family: var(--fuente-principal);
+    font-weight: bold;
+    font-size: 2.5rem;
+    color: var(--color-primario);
+    margin-bottom: 2rem;
+    text-align: left;
+  }
+  
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .about p {
+    font-family: var(--fuente-secundaria);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: left;
+    margin-bottom: 1rem;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .about {
+      padding: 2rem 1rem;
+    }
+  
+    .about h1 {
+      font-size: 2rem;
+    }
+  }

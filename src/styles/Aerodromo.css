@@ -1,36 +1,111 @@
 .aerodromo {
-    text-align: center;
-    padding: 50px;
-    background-color: #f0f9ff;
-    color: #1e3a8a;
-  }
- /* Carrusel: imágenes del mismo tamaño */
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  padding: 3rem 2rem;
+  height: auto;
+  width: 50%;
+}
+
+.aerodromo h1 {
+  font-family: var(--fuente-principal);
+  font-weight: bold;
+  font-size: 2.5rem;
+  color: var(--color-primario);
+  margin-bottom: 1.5rem;
+  text-align: center;
+  
+}
+
+.aerodromo h3 {
+  font-family: var(--fuente-principal);
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: var(--color-primario);
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.carousel-container {
+  margin-bottom: 2rem;
+}
+
+.carousel {
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel .slide {
+  flex: 0 0 100%;
+}
+
 .carousel .slide img {
-    height: 500px; /* ajusta según lo que necesites */
-    width: 100%;
-    object-fit: contain; /* puedes usar 'contain' si quieres que quepa todo */
+  width: 100%;
+  height: 400px; /* Ajusta según necesites */
+  object-fit: cover;
+}
+
+.carousel-nav {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  transform: translateY(-50%);
+}
+
+.carousel-nav button {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-nav button:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.aerodromo ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.aerodromo ul li {
+  font-family: var(--fuente-secundaria);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+  color: var(--color-texto);
+  text-align: left;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .aerodromo {
+    padding: 2rem 1rem;
   }
-  
-  /* Lista alineada a la izquierda */
-  .aerodromo ul {
-    
-    text-align: left;
-    padding-left: 1.5rem; /* asegura sangría de lista */
-    list-style-type: disc;
+
+  .aerodromo h1 {
+    font-size: 2rem;
   }
-  
-  /* Opcional: margenes entre items de la lista */
-  .aerodromo ul li {
-    margin-bottom: 0.5rem;
-    font-size: 1.2rem;
+
+  .aerodromo h3 {
+    font-size: 1.3rem;
   }
-  h1{
-    font-size: 3rem;
+
+  .carousel .slide img {
+    height: 300px; /* Ajusta para pantallas más pequeñas */
   }
-  h3{
-    font-size: 1.5rem;
-        text-align: left;
-        padding-top: 1rem;
-        padding-left: 1.5rem;
-        padding-bottom: 1rem;
-  }
+}

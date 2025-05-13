@@ -59,36 +59,35 @@ export const Helipuertos = () => {
 
       <h3>Realizamos:</h3>
       <ul>
+      <li>Proyectos de superficie y elevados.</li>
         <li>
-          Estudios de factibilidad, proyecto ejecutivo, confección de la
+          Estudios de factibilidad, proyecto ejecutivo y confección de la
           documentación aeronáutica.
         </li>
         <li>
-          Proyectos de ampliaciones o modificación de Helipuertos, pistas,
+          Proyectos de ampliaciones y modificación de Helipuertos, pistas,
           plataformas o rodajes.
         </li>
 
         <li>
-          Diagramación de ayudas visuales, señalamiento visual diurno y/o
+          Diagramación de ayudas visuales, señalamiento visual diurno y
           nocturno.
         </li>
         <li>
-          Demarcación de señales eje de la calle de rodaje y puestos de
+          Demarcación de señales, eje de la calle de rodaje y puestos de
           estacionamiento en plataformas.
         </li>
         <li>
-          Estudio para emplazamiento de hangares, edificaciones y objetos en
-          proximidades o dentro de helipuertos.
+          Estudio para emplazamiento de hangares, edificaciones y obstaculos.
         </li>
         <li>
-          Planos detallados que incluyan la ubicación, las medidas y los
-          detalles de la estructura del helipuerto.
+          Planos detallados que incluyen la ubicación, medidas y detalles de la estructura del proyecto.
         </li>
-        <li>Plan de emergencia de Helipuerto.</li>
+        <li>Plan de emergencia.</li>
         <li>Plan de mantenimiento.</li>
         <li>Estudio de Impacto ambiental.</li>
-        <li>Estudios aeronáuticos para establecer normas particulares.</li>
-        <li>Relevamientos de obstáculos, datos electrónicos de terreno.</li>
+        <li>Relevamientos de obstáculos, datos electrónicos del terreno.</li>
+      
       </ul>
     </div>
   );

@@ -1,8 +1,20 @@
+:root {
+  /* Paleta de Colores */
+  --color-primario: #1E3A8A;
+  --color-secundario: #38BDF8;
+  --color-fondo: #F0F9FF;
+  --color-texto: #333333;
+
+  /* Tipografía */
+  --fuente-principal: "Roboto", sans-serif;
+  --fuente-secundaria: "Lora", serif;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: var(--fuente-principal); /* Usamos la variable CSS */
 }
 
 .app-container {
@@ -22,16 +34,6 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .navbar-links {
-    flex-direction: column;
-    gap: 10px;
-  }
-
   .main-content {
     padding: 10px;
   }
