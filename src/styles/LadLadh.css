@@ -5,7 +5,7 @@
     padding: 3rem 2rem;
     height: auto;
     width: 50%;
-    background-image: url("../public/images/fondolad.jpg");
+    background-color: inherit;
     background-size:contain;
     opacity: 0.9;
     background-repeat: no-repeat;

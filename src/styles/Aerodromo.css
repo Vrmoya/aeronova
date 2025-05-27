@@ -7,7 +7,7 @@
 }
 
 .aerodromo h1 {
-  font-family: var(--fuente-principal);
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   font-size: 2.5rem;
   color: var(--color-primario);
@@ -17,7 +17,7 @@
 }
 
 .aerodromo h3 {
-  font-family: var(--fuente-principal);
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: 500;
   font-size: 1.5rem;
   color: var(--color-primario);
@@ -83,7 +83,7 @@
 }
 
 .aerodromo ul li {
-  font-family: var(--fuente-secundaria);
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 0.5rem;

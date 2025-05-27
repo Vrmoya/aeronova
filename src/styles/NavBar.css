@@ -1,3 +1,16 @@
+/* Variables (Keep these if you have them defined elsewhere) */
+:root {
+  --color-fondo: #f5f5f5;
+  /* Example: Light gray */
+  --color-texto: #333;
+  /* Example: Dark gray */
+  --color-primario: #007bff;
+  /* Example: Blue (adjust as needed) */
+  --fuente-principal: 'Arial', sans-serif;
+  --fuente-secundaria: 'Helvetica', sans-serif;
+  --color-secundario: #0056b3; /* Un azul más oscuro para focus/hover */
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -5,7 +18,8 @@
   /* Fondo degradado horizontal de celeste a blanco */
   background: linear-gradient(to left, #ADD8E6, white);
   padding: 1rem 2rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Sombra suave */
 }
 
 .navbar-logo img {
@@ -22,39 +36,117 @@
 
 .navbar-links li a {
   text-decoration: none;
-  color: #333; /* Cambié el color del texto a un gris oscuro para mejor contraste */
+  color: #333;
+  /* Cambié el color del texto a un gris oscuro para mejor contraste */
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
 .navbar-links li a:hover {
-  color: var(--color-primario); /* Usa el color primario al hacer hover */
+  color: var(--color-primario);
+  /* Usa el color primario al hacer hover */
   text-decoration: underline;
 }
 
-/* Estilos para el select */
-.navbar-links select {
-  background-color: inherit; /* Fondo blanco para el select */
-  border: none; /* Borde gris claro */
-  color: #333; /* Color del texto gris oscuro */
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  font-family: var(--fuente-principal);
-  font-size: 1rem;
+/* --- Estilos para el menú desplegable personalizado --- */
+
+.navbar-links li.dropdown {
+  position: relative;
+  /* Esencial para posicionar los menús desplegables */
+}
+
+.dropdown-trigger {
   cursor: pointer;
-  appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' fill='%23333'%3E%3Cpath d='M6 8.125a.375.375 0 01-.265-.11L1.64 3.93a.438.438 0 01.619-.619L6 7.266l3.746-3.955a.438.438 0 01.62.619L6.266 8.016a.375.375 0 01-.266.109z'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 0.5rem center;
-  background-size: 0.75rem;
+  padding: 0.5rem 1rem;
+  color: #333;
+  font-weight: 500;
+  text-decoration: none;
+  display: block;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  border-radius: 4px;
 }
 
-.navbar-links select:focus {
-  outline: none;
-  border-color: var(--color-secundario);
-  box-shadow: 0 0 0 2px var(--color-secundario);
+.dropdown-trigger:hover {
+  color: var(--color-primario);
+  text-decoration: underline;
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  min-width: 200px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 4px;
+  /* *** Depuración: Quita overflow:hidden TEMPORALMENTE para ver si el submenu se sale *** */
+  /* overflow: hidden;/* Quita esta línea para depurar */
+
+  /* *** Depuración: Borde visible para el menú principal *** */
+  border: 2px solid red !important;
+}
+
+.dropdown-menu .submenu-trigger {
+  cursor: pointer;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #333;
+  font-weight: 500;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-menu .submenu-trigger:hover {
+  background-color: #f0f0f0;
+  color: var(--color-primario);
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f0f0f0;
+  color: var(--color-primario);
+}
+
+.submenu {
+  position: absolute;
+  top: 0;
+  /* *** Depuración: Prueba con un 'left' que sabes que lo hará visible *** */
+  left: calc(-95% + 2px) !important; /* Si tu min-width es 200px, 200px a la derecha debería funcionar */
+  /* left: 100%; */ /* Comenta esta línea */
+  /* left: calc(100% - 2px); */ /* Comenta esta línea */
+
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* *** Depuración: Aumenta el z-index si crees que algo lo cubre *** */
+  z-index: 9999 !important; /* Asegura que esté por encima de todo */
+
+  min-width: 180px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 4px;
+  overflow: hidden; /* Mantener overflow en el submenu para sus propios contenidos */
+
+  /* *** Depuración: Borde visible y fondo llamativo para el submenú *** */
+  border: 2px solid blue !important;
+  background-color: lightblue !important; /* Cambia el color para que sea obvio */
+}
+
+/* --- Media Queries --- */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
@@ -83,7 +175,7 @@
   .navbar-toggle {
     display: block;
     cursor: pointer;
-    color: #333; /* Color del ícono gris oscuro */
+    color: #333;
     font-size: 1.5rem;
     padding: 0.5rem;
   }
@@ -94,5 +186,52 @@
 
   .navbar-links.hidden {
     display: none;
+  }
+
+  /* Ajustes para los menús desplegables en móvil */
+  .navbar-links li.dropdown {
+    width: 100%; /* Ocupa todo el ancho en móvil */
+  }
+
+  .dropdown-trigger {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0; /* Ajustar padding para centrar */
+  }
+
+  .dropdown-menu {
+    position: static; /* Cambia a posición estática para fluir con el contenido */
+    width: 100%;
+    box-shadow: none; /* Elimina la sombra en móvil */
+    border-top: 1px solid #eee; /* Separador sutil */
+    border-radius: 0; /* Sin bordes redondeados en móvil */
+    /* *** Depuración: Mantén el borde en móvil para ver si aparece *** */
+    border: 2px dashed green !important;
+  }
+
+  .dropdown-menu .submenu-trigger {
+    padding-left: 30px; /* Indentación para sub-opciones */
+    justify-content: flex-start; /* Alinea a la izquierda */
+  }
+
+  .dropdown-menu a {
+    padding-left: 30px; /* Indentación para opciones */
+    text-align: left;
+  }
+
+  .submenu {
+    position: static; /* Cambia a posición estática */
+    width: 100%;
+    box-shadow: none;
+    border-top: 1px solid #eee;
+    border-radius: 0;
+    padding-left: 20px; /* Indentación adicional para el sub-menú */
+    /* *** Depuración: Mantén el borde y fondo en móvil *** */
+    border: 2px dotted orange !important;
+    background-color: lightcoral !important;
+  }
+
+  .submenu a {
+    padding-left: 40px; /* Indentación para las opciones del sub-menú */
   }
 }

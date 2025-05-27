@@ -39,6 +39,40 @@ export const Home = () => {
             </div>
           </Link>
         </div>
+        <div>
+          <Link to="/cartografia" className="carousel-link">
+            <div className="contenedor carousel-item">
+              <img src="../images/DRONES/consultoria.jpeg" alt="consultoria" />
+              <div className="texto">
+                <h3>CARTOGRAFIA</h3>
+                <p>Es la ciencia, el arte y la técnica de trazar y estudiar mapas geográficos. En esencia, se dedica a la representación gráfica y simbólica de la superficie terrestre (o parte de ella) en un plano</p>
+              </div>
+            </div>
+          </Link>
+        </div>
+        <div>
+          <Link to="/vant" className="carousel-link">
+            <div className="contenedor carousel-item">
+              <img src="../images/DRONES/Drone_1.jpeg" alt="DRONE 1" />
+              <div className="texto">
+                <h3>VANT</h3>
+                <p>Vehiculo Aereo No Tripulado (DRONES)</p>
+              </div>
+            </div>
+          </Link>
+        </div>
+        <div>
+          <Link to="/consultoria" className="carousel-link">
+            <div className="contenedor carousel-item">
+              <img src="../images/DRONES/consultoria.jpeg" alt="consultoria" />
+              <div className="texto">
+                <h3>CONSULTORIA</h3>
+                <p>Un helipuerto es un área, a menudo una pista, designada para el aterrizaje y despegue de helicópteros</p>
+              </div>
+            </div>
+          </Link>
+        </div>
+        
       </Carousel>
     </div>
   );

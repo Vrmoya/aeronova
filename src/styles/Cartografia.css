@@ -1,4 +1,4 @@
-.helipuerto {
+.cartografia {
   background-color: var(--color-fondo);
   color: var(--color-texto);
   padding: 3rem 2rem;
@@ -6,8 +6,8 @@
   width: 50%;
 }
 
-.helipuerto h1 {
-  font-family: var(--fuente-principal);
+.cartografia h1 {
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   font-size: 2.5rem;
   color: var(--color-primario);
@@ -16,8 +16,8 @@
   
 }
 
-.helipuerto h3 {
-  font-family: var(--fuente-principal);
+.cartografia h3 {
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: 500;
   font-size: 1.5rem;
   color: var(--color-primario);
@@ -77,13 +77,13 @@
   background: rgba(0, 0, 0, 0.7);
 }
 
-.helipuerto ul {
+.cartografia ul {
   list-style-type: disc;
   padding-left: 1.5rem;
 }
 
-.helipuerto ul li {
-  font-family: var(--fuente-secundaria);
+.cartografia ul li {
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 0.5rem;
@@ -93,15 +93,15 @@
 
 /* Media Queries */
 @media (max-width: 768px) {
-  .helipuerto {
+  .cartografia {
     padding: 2rem 1rem;
   }
 
-  .helipuerto h1 {
+  .cartografia h1 {
     font-size: 2rem;
   }
 
-  .helipuerto h3 {
+  .cartografia h3 {
     font-size: 1.3rem;
   }
 
