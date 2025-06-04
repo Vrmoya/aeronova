@@ -4,8 +4,8 @@ import "../styles/Home.css";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 // Importar FontAwesome
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInstagram } from '@fortawesome/free-brands-svg-icons'; // Importa el icono de Instagram
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faInstagram } from "@fortawesome/free-brands-svg-icons"; // Importa el icono de Instagram
 import helipuertos from "../images/HELI/heli9.jpg";
 import aerodromos from "../images/AD/aerodromo4.jpeg";
 import cartografia from "../images/CARTO/CARTO1.jpeg";
@@ -31,7 +31,10 @@ export const Home = () => {
               <img src={helipuertos} alt="helipuerto" />
               <div className="texto">
                 <h3>HELIPUERTOS</h3>
-                <p>Un helipuerto es un área, a menudo una pista, designada para el aterrizaje y despegue de helicópteros</p>
+                <p>
+                  Un helipuerto es un área o pista de aterrizaje y despegue
+                  destinada a ser utilizada por helicópteros.
+                </p>
               </div>
             </div>
           </Link>
@@ -42,7 +45,12 @@ export const Home = () => {
               <img src={aerodromos} alt="aerodromo" />
               <div className="texto">
                 <h3>AERODROMO</h3>
-                <p>Un aeródromo es una superficie terrestre o acuática definida y habilitada para el despegue, aterrizaje y movimiento de aeronaves. Se trata de un término general que abarca cualquier área utilizada para estas operaciones aéreas</p>
+                <p>
+                  Un aeródromo es una zona definida, en tierra o agua, que
+                  incluye edificios, instalaciones y equipos, destinada a ser
+                  utilizada total o parcialmente para la llegada, salida y
+                  movimiento en superficie de aeronaves.
+                </p>
               </div>
             </div>
           </Link>
@@ -53,7 +61,13 @@ export const Home = () => {
               <img src={cartografia} alt="consultoria" />
               <div className="texto">
                 <h3>CARTOGRAFIA</h3>
-                <p>Es la ciencia, el arte y la técnica de trazar y estudiar mapas geográficos. En esencia, se dedica a la representación gráfica y simbólica de la superficie terrestre (o parte de ella) en un plano</p>
+                <p>
+                  Es un conjunto de estudios y operaciones científicas,
+                  artísticas y técnicas que intervienen en el establecimiento de
+                  mapas, planos, cartas, entre otros, y su utilización con el
+                  fin de realizar la representación de un espacio físico con
+                  datos específicos representados en un producto cartográfico.
+                </p>
               </div>
             </div>
           </Link>
@@ -75,12 +89,10 @@ export const Home = () => {
               <img src={consultoria} alt="consultoria" />
               <div className="texto">
                 <h3>CONSULTORIA</h3>
-                <p>Un helipuerto es un área, a menudo una pista, designada para el aterrizaje y despegue de helicópteros</p>
               </div>
             </div>
           </Link>
         </div>
-
       </Carousel>
 
       {/* Nuevo contenedor para el icono de Instagram */}
@@ -91,7 +103,9 @@ export const Home = () => {
           rel="noopener noreferrer" // Mejora la seguridad al abrir en nueva pestaña
           className="instagram-link"
         >
-          <FontAwesomeIcon icon={faInstagram} size="3x" /> {/* Icono de Instagram, tamaño 3 veces el normal */}
+          <FontAwesomeIcon icon={faInstagram} size="3x" />{" "}
+          {/* Icono de Instagram, tamaño 3 veces el normal */}
+          @aeronova_consultora
         </a>
       </div>
     </div>
