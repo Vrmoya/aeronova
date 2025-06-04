@@ -38,30 +38,30 @@ export const About = () => {
       <h3>Nuestra Propuesta</h3>
       <ul>
         <li>
-          Damos servicios y productos de valor en los proyectos y obras
+          Ofrecemos servicios y productos de valor en los proyectos y obras
           realizadas en el mercado aeronáutico.
         </li>
         <li>
           Contamos con equipo de profesionales especializados en el terreno
-          aeronáutico y practica experiencia.
+          aeronáutico y práctica experiencia.
         </li>
         <li>
-          quipo de precisión y herramientas de medición calibrados y homologados
+          Equipo de precisión y herramientas de medición calibrados y homologados
           para el uso aeronáutico. 
         </li>
         <li>
-          Herramientas tecnológicas con estándares de calidad en la
+          Empleamos herramientas tecnológicas con estándares de calidad en la
           planificación, diseño y ejecución de obras aeroportuarias{" "}
         </li>
         <li>
           La pasión por profesionalizar el sector agregamos innovación
-          tecnología y trasparencia, nos da la confianza del cliente en la
+          tecnología y transparencia, nos da la confianza del cliente en la
           unidad de negocio, contribuyendo al crecimiento y modernización de la
           aviación
         </li>
         <li>
           {" "}
-          Damos respuesta ágil los lideres que debe responder rápidamente
+          Damos respuesta ágil los líderes que deben responder rápidamente
           asuntos que involucren reglamentaciones vigentes, o problemas
           complejos a la toma de decisión y factibilidad de proyectos
           escalables.{" "}
