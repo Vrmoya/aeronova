@@ -16,11 +16,18 @@ export const Vant = () => {
        <div>
        <img src="../images/DRONES/Drone_1.jpeg" alt="Drone 1" />
         </div>
-        <div>
-       <img src="../images/DRONES/Drone_2.jpeg" alt="Drone 2" />
-        </div>
+       
         <div>
        <img src="../images/DRONES/Drone_3.jpeg" alt="Drone 3" />
+        </div> 
+         <div>
+       <img src="../images/DRONES/Drone_4.jpeg" alt="Drone 4" />
+        </div> 
+         <div>
+       <img src="../images/DRONES/Drone_5.jpeg" alt="Drone 5" />
+        </div> 
+         <div>
+       <img src="../images/DRONES/Drone_6.jpeg" alt="Drone 6" />
         </div> 
       </Carousel>
 

@@ -3,13 +3,16 @@ import { Link } from "react-router-dom";
 import "../styles/Home.css";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+// Importar FontAwesome
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInstagram } from '@fortawesome/free-brands-svg-icons'; // Importa el icono de Instagram
 
 export const Home = () => {
   return (
     <div className="home">
       <h2>Bienvenidos</h2>
       <h1>Aeronova Consultora Aeronautica</h1>
-      
+
       <Carousel
         showThumbs={false}
         autoplay
@@ -42,7 +45,7 @@ export const Home = () => {
         <div>
           <Link to="/cartografia" className="carousel-link">
             <div className="contenedor carousel-item">
-              <img src="../images/DRONES/consultoria.jpeg" alt="consultoria" />
+              <img src="../images/CARTO/CARTO1.jpeg" alt="consultoria" />
               <div className="texto">
                 <h3>CARTOGRAFIA</h3>
                 <p>Es la ciencia, el arte y la técnica de trazar y estudiar mapas geográficos. En esencia, se dedica a la representación gráfica y simbólica de la superficie terrestre (o parte de ella) en un plano</p>
@@ -72,8 +75,20 @@ export const Home = () => {
             </div>
           </Link>
         </div>
-        
+
       </Carousel>
+
+      {/* Nuevo contenedor para el icono de Instagram */}
+      <div className="instagram-container">
+        <a
+          href="https://www.instagram.com/aeronova_consultora"
+          target="_blank" // Abre el enlace en una nueva pestaña
+          rel="noopener noreferrer" // Mejora la seguridad al abrir en nueva pestaña
+          className="instagram-link"
+        >
+          <FontAwesomeIcon icon={faInstagram} size="3x" /> {/* Icono de Instagram, tamaño 3 veces el normal */}
+        </a>
+      </div>
     </div>
   );
 };

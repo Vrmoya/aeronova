@@ -5,7 +5,7 @@ import { Carousel } from "react-responsive-carousel";
 export const Helipuertos = () => {
   return (
     <div className="helipuerto">
-      <h1>Helipuertos</h1>
+      <h1>HELIPUERTOS</h1>
       <Carousel
         showThumbs={false}
         autoPlay
@@ -87,7 +87,8 @@ export const Helipuertos = () => {
         <li>Plan de mantenimiento.</li>
         <li>Estudio de Impacto ambiental.</li>
         <li>Relevamientos de obstáculos, datos electrónicos del terreno.</li>
-      
+      <li>LADH (Lugar Apto Denunciado Helipuerto)</li>
+        
       </ul>
     </div>
   );

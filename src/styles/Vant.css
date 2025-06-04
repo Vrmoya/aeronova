@@ -1,23 +1,30 @@
+:root {
+  /* Define tus variables CSS personalizadas aquí, por ejemplo: */
+  --color-fondo: #f0f0f0;
+  --color-texto: #333;
+  --color-primario: #007bff;
+}
+
 .vant {
   background-color: var(--color-fondo);
   color: var(--color-texto);
   padding: 3rem 2rem;
   height: auto;
-  width: 50%;
+  width: 100%; /* Changed to 100% to take full width on smaller screens */
+  box-sizing: border-box; /* Ensures padding is included in the width */
 }
 
 .vant h1 {
-  font-family: var(--fuente-principal);
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   font-size: 2.5rem;
   color: var(--color-primario);
   margin-bottom: 1.5rem;
   text-align: center;
-  
 }
 
 .vant h3 {
-  font-family: var(--fuente-principal);
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: 500;
   font-size: 1.5rem;
   color: var(--color-primario);
@@ -41,13 +48,14 @@
 }
 
 .carousel .slide {
-  flex: 0 0 100%;
+  flex: 0 0 100%; /* Each slide takes 100% of the carousel-inner width */
 }
 
 .carousel .slide img {
-  width: 100%;
-  height: 400px; /* Ajusta según necesites */
-  object-fit: cover;
+  width: 100%; /* Image takes 100% width of its slide */
+  height: 600px; /* Set a consistent height for all images in the carousel */
+  object-fit: contain; /* KEY CHANGE: This makes the image cover the 100% width and specified height, cropping if necessary */
+  display: block; /* Removes extra space below the image if any */
 }
 
 .carousel-nav {
@@ -60,6 +68,7 @@
   align-items: center;
   padding: 0 1rem;
   transform: translateY(-50%);
+  z-index: 10; /* Ensure navigation buttons are above images */
 }
 
 .carousel-nav button {
@@ -83,7 +92,7 @@
 }
 
 .vant ul li {
-  font-family: var(--fuente-secundaria);
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 0.5rem;
@@ -92,9 +101,39 @@
 }
 
 /* Media Queries */
-@media (max-width: 768px) {
+
+/* Extra small devices (phones, 600px and down) */
+@media (max-width: 600px) {
   .vant {
-    padding: 2rem 1rem;
+    padding: 1.5rem 1rem;
+  }
+
+  .vant h1 {
+    font-size: 1.8rem;
+  }
+
+  .vant h3 {
+    font-size: 1.2rem;
+  }
+
+  .carousel .slide img {
+    height: 250px; /* Smaller height for very small screens */
+  }
+
+  .carousel-nav button {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.8rem;
+  }
+
+  .vant ul li {
+    font-size: 1rem;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 601px to 768px) */
+@media (min-width: 601px) and (max-width: 768px) {
+  .vant {
+    padding: 2rem 1.5rem;
   }
 
   .vant h1 {
@@ -106,6 +145,51 @@
   }
 
   .carousel .slide img {
-    height: 300px; /* Ajusta para pantallas más pequeñas */
+    height: 300px; /* Adjust for tablets */
   }
+}
+
+/* Medium devices (landscape tablets, 769px to 992px) */
+@media (min-width: 769px) and (max-width: 992px) {
+  .vant {
+    width: 80%; /* Adjust width for medium screens */
+    margin: 0 auto; /* Center the block */
+  }
+
+  .vant h1 {
+    font-size: 2.2rem;
+  }
+
+  .vant h3 {
+    font-size: 1.4rem;
+  }
+
+  .carousel .slide img {
+    height: 350px;
+  }
+}
+
+/* Large devices (laptops/desktops, 993px to 1200px) */
+@media (min-width: 993px) and (max-width: 1200px) {
+  .vant {
+    width: 70%; /* Adjust width for larger screens */
+    margin: 0 auto; /* Center the block */
+  }
+
+  .vant h1 {
+    font-size: 2.4rem;
+  }
+
+  .carousel .slide img {
+    height: 400px;
+  }
+}
+
+/* Extra large devices (large desktops, 1201px and up) */
+@media (min-width: 1201px) {
+  .vant {
+    width: 50%; /* Original width for extra large screens */
+    margin: 0 auto; /* Center the block */
+  }
+  /* No changes needed for h1, h3, img as they are at base size */
 }

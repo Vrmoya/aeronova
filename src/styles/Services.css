@@ -1,67 +1,145 @@
 .services {
   background-color: white;
   color: var(--color-texto);
-  padding: 3rem 2rem;
+  padding: 3rem 2rem; /* Use rem for padding */
   text-align: center;
+  box-sizing: border-box;
 }
 
 .services h2 {
   font-family: var(--fuente-principal);
   font-weight: bold;
-  font-size: 2.5rem;
+  font-size: 2.5rem; /* Use rem */
   color: var(--color-primario);
   margin-bottom: 2rem;
+  word-wrap: break-word;
 }
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Diseño de tarjetas responsivo */
-  gap: 2rem;
-  max-width: 1000px;
-  margin: 0 auto;
+  /* Adjust minmax to control column wrapping */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Larger min-width for cards */
+  gap: 2rem; /* Use rem for gap */
+  max-width: 1100px; /* Adjusted max-width for the grid container */
+  margin: 0 auto; /* Center the grid */
+  padding: 0 1rem; /* Add horizontal padding for smaller screens */
 }
 
 .service-card {
   background-color: var(--color-fondo);
   border-radius: 8px;
-  padding: 1.5rem;
+  padding: 1.5rem; /* Use rem for padding */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out;
+  display: flex; /* Use flexbox for content inside card */
+  flex-direction: column; /* Stack icon and text */
+  align-items: center; /* Center content */
+  text-align: center; /* Center text */
+  box-sizing: border-box;
 }
 
 .service-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px); /* More noticeable hover effect */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
 }
 
 .service-card i {
   /* Estilos para los íconos (puedes usar una librería como Font Awesome) */
-  font-size: 2rem;
+  font-size: 2.5rem; /* Larger icon size */
   color: var(--color-secundario);
-  margin-bottom: 1rem;
+  margin-bottom: 1rem; /* Use rem for margin */
 }
 
 .service-card h3 {
   font-family: var(--fuente-principal);
-  font-weight: 500;
-  font-size: 1.2rem;
+  font-weight: bold;
+  font-size: 1.3rem; /* Use rem */
   color: var(--color-primario);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.8rem; /* Use rem for margin */
+  word-wrap: break-word;
 }
 
 .service-card p {
   font-family: var(--fuente-secundaria);
-  font-size: 1rem;
+  font-size: 1rem; /* Use rem */
+  line-height: 1.6;
   color: var(--color-texto);
-  line-height: 1.4;
+  word-wrap: break-word;
 }
 
-/* Media Queries */
+/* Media Queries for Services.css */
+
+/* For tablets and smaller desktops */
+@media (max-width: 1024px) {
+  .services {
+    padding: 2.5rem 1.5rem;
+  }
+  .services h2 {
+    font-size: 2.2rem;
+  }
+  .services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust min-width */
+    gap: 1.5rem;
+    padding: 0 0.8rem;
+  }
+  .service-card {
+    padding: 1.2rem;
+  }
+  .service-card i {
+    font-size: 2.2rem;
+  }
+  .service-card h3 {
+    font-size: 1.2rem;
+  }
+  .service-card p {
+    font-size: 0.95rem;
+  }
+}
+
+/* For mobile devices */
 @media (max-width: 768px) {
   .services {
     padding: 2rem 1rem;
   }
-
   .services h2 {
     font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  .services-grid {
+    grid-template-columns: 1fr; /* Stack cards on top of each other */
+    gap: 1rem;
+    padding: 0;
+  }
+  .service-card {
+    padding: 1rem;
+  }
+  .service-card i {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+  }
+  .service-card h3 {
+    font-size: 1.1rem;
+  }
+  .service-card p {
+    font-size: 0.9rem;
+  }
+}
+
+/* For very small mobile devices */
+@media (max-width: 480px) {
+  .services {
+    padding: 1.5rem 0.8rem;
+  }
+  .services h2 {
+    font-size: 1.75rem;
+  }
+  .service-card i {
+    font-size: 1.8rem;
+  }
+  .service-card h3 {
+    font-size: 1rem;
+  }
+  .service-card p {
+    font-size: 0.85rem;
   }
 }

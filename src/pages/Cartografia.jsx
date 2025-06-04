@@ -6,7 +6,7 @@ import { Carousel } from "react-responsive-carousel";
 export const Cartografia = () => {
   return (
     <div className="cartografia">
-      <h1>Cartografia</h1>
+      <h1>CARTOGRAFIA</h1>
 
       <Carousel
         showThumbs={false}
@@ -16,7 +16,13 @@ export const Cartografia = () => {
         className="carousel"
       >
         <div>
-          <img src="../images/AD/aerodromo1.jpg" alt="Aeródromo 1" />
+          <img src="../images/CARTO/CARTO1.jpeg" alt="carto 1" />
+        </div>
+        <div>
+          <img src="../images/CARTO/CARTO2.jpeg" alt="carto 2" />
+        </div>
+        <div>
+          <img src="../images/CARTO/CARTO3.jpeg" alt="carto 3" />
         </div>
         
       </Carousel>

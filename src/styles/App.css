@@ -6,7 +6,7 @@
   --color-texto: #333333;
 
   /* Tipografía */
-  --fuente-principal: Arial,  sans-serif;
+  --fuente-principal: 'Arial', sans-serif; /* Added quotes for better compatibility */
   --fuente-secundaria: "Lora", serif;
 }
 
@@ -17,6 +17,10 @@
   font-family: var(--fuente-principal); /* Usamos la variable CSS */
 }
 
+html {
+  font-size: 16px; /* Base font size for rem units */
+}
+
 .app-container {
   display: flex;
   flex-direction: column;
@@ -25,16 +29,38 @@
 
 .main-content {
   flex-grow: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: flex; /* Use flexbox for centering */
+  flex-direction: column; /* Stack content vertically if needed */
+  justify-content: flex-start; /* Align content to the start, individual components will center themselves */
+  align-items: center; /* Center items horizontally */
   text-align: center;
-  padding: 20px;
+  padding: 20px; /* Base padding */
+  width: 100%; /* Ensure it takes full width */
+  max-width: 100%; /* Ensure it doesn't overflow */
+  margin: 0 auto; /* Center the main content area */
 }
 
-/* Responsive Design */
+/* Responsive Design for App.css */
+@media (max-width: 1200px) {
+  .main-content {
+    padding: 15px;
+  }
+}
+
 @media (max-width: 768px) {
+  html {
+    font-size: 15px; /* Slightly smaller base font for tablets */
+  }
   .main-content {
     padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 14px; /* Even smaller base font for mobile */
+  }
+  .main-content {
+    padding: 5px;
   }
 }

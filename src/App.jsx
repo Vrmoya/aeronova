@@ -10,7 +10,7 @@ import { Helipuertos } from "./pages/Helipuertos";
 import { About } from "./pages/About";
 import { Vant } from "./pages/Vant";
 import "./styles/App.css";
-import { LadLadH } from "./pages/Lad-LadH";
+
 import { Consultoria } from "./pages/Consultoria";
 import { Cartografia } from "./pages/Cartografia";
 
@@ -27,7 +27,7 @@ function App() {
           <Route path="/helipuertos" element={<Helipuertos />} />
           <Route path="/nosotros" element={<About />} />
           <Route path="/vant" element={<Vant />} />
-          <Route path="/ladladH" element={<LadLadH />} />
+       
           <Route path="/consultoria" element={<Consultoria />} />
           <Route path="/cartografia" element={<Cartografia />} />
         </Routes>

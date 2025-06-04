@@ -1,47 +1,54 @@
-.contact {
+/* Variables (Keep these if you have them defined elsewhere) */
+
+
+.contacto {
   height: auto;
-  width: 80%;
-   background-image: url("../../public/images/degradado.png");
-        background-size:contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        opacity: 0.9;
-  padding: 3rem 2rem;
-  text-shadow: 
-    -1px -1px 0 white,  
-     1px -1px 0 white,
-    -1px  1px 0 white,
-     1px  1px 0 white;  
-     
+  /* width: 80%; */ /* Removed fixed width, will use max-width and margin auto */
+  max-width: 1200px; /* Limit overall width on large screens */
+  margin: 0 auto; /* Center the contacto section */
+  background-image: url("../../images/LOGO.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.9;
+  padding: 3rem 2rem; /* Keep existing padding, adjusted later for mobile */
+  text-shadow:
+    -1px -1px 0 white,
+    1px -1px 0 white,
+    -1px 1px 0 white,
+    1px 1px 0 white;
 }
 
-.contact h2 {
+.contacto h2 {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
-  font-size: 2.5rem;
+  font-size: 2.5rem; /* Will be adjusted for smaller screens */
   color: var(--color-primario);
   margin-bottom: 2rem;
   text-align: center;
 }
 
-.contact-container {
+.contacto-container {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Dos columnas */
+  grid-template-columns: 1fr 1fr;
+  /* Two columns by default */
   gap: 2rem;
   max-width: 800px;
   margin: 0 auto;
 }
 
-.contact-form {
+.contacto-form {
   display: flex;
   flex-direction: column;
-  
+
 }
-.contact fieldset {
+
+.contacto fieldset {
   border: none;
   padding: 0;
   margin: 0;
 }
+
 .form-group {
   margin-bottom: 1rem;
 }
@@ -53,11 +60,11 @@
   display: block;
   margin-bottom: 0.5rem;
   text-align: left;
-  text-shadow: 
-    -0.5px -0.5px 0 white,  
-     0.5px -0.5px 0 white,
-    -0.5px  0.5px 0 white,
-     0.5px  0.5px 0 white;  
+  text-shadow:
+    -0.5px -0.5px 0 white,
+    0.5px -0.5px 0 white,
+    -0.5px 0.5px 0 white,
+    0.5px 0.5px 0 white;
 }
 
 .form-group input,
@@ -99,11 +106,11 @@
   background-color: var(--color-secundario);
 }
 
-.contact-info {
+.contacto-info {
   text-align: left;
 }
 
-.contact-info p {
+.contacto-info p {
   font-family: var(--fuente-secundaria);
   font-size: 1.1rem;
   line-height: 1.6;
@@ -111,7 +118,7 @@
   margin-bottom: 1rem;
 }
 
-.contact-info i {
+.contacto-info i {
   /* Estilos para los íconos (puedes usar una librería como Font Awesome) */
   font-size: 1.5rem;
   color: var(--color-secundario);
@@ -120,16 +127,61 @@
 
 
 /* Media Queries */
+
+/* For screens smaller than 1024px (e.g., tablets in landscape, or smaller desktops) */
+@media (max-width: 1024px) {
+  .contacto {
+    padding: 2.5rem 1.5rem; /* Slightly reduced padding */
+  }
+
+  .contacto h2 {
+    font-size: 2.2rem; /* Slightly smaller heading */
+  }
+
+  .contacto-container {
+    gap: 1.5rem; /* Reduced gap */
+  }
+}
+
+/* For screens smaller than 768px (e.g., tablets in portrait, large phones) */
 @media (max-width: 768px) {
-  .contact {
-    padding: 2rem 1rem;
+  .contacto {
+    padding: 2rem 1rem; /* More reduced padding */
+    width: auto; /* Allow full width of parent if desired, or remove */
   }
 
-  .contact h2 {
-    font-size: 2rem;
+  .contacto h2 {
+    font-size: 2rem; /* Adjusted heading size */
   }
 
-  .contact-container {
-    grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
+  .contacto-container {
+    grid-template-columns: 1fr;
+    /* Single column layout */
+  }
+
+  .contacto-info p {
+    font-size: 1rem; /* Slightly smaller text */
+  }
+}
+
+/* For very small screens (e.g., mobile phones in portrait) */
+@media (max-width: 480px) {
+  .contacto {
+    padding: 1.5rem 0.75rem; /* Even more reduced padding */
+  }
+
+  .contacto h2 {
+    font-size: 1.8rem; /* Smaller heading for very small screens */
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .submit-button {
+    font-size: 0.95rem; /* Slightly smaller font size for inputs/buttons */
+    padding: 0.6rem; /* Adjust padding for inputs/buttons */
+  }
+
+  .contacto-info p {
+    font-size: 0.95rem; /* Smaller text for very small screens */
   }
 }

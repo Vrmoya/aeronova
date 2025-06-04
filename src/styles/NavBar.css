@@ -4,11 +4,12 @@
   /* Example: Light gray */
   --color-texto: #333;
   /* Example: Dark gray */
-  --color-primario: #007bff;
+  --color-primario: #1a3a8a;
   /* Example: Blue (adjust as needed) */
   --fuente-principal: 'Arial', sans-serif;
   --fuente-secundaria: 'Helvetica', sans-serif;
-  --color-secundario: #0056b3; /* Un azul más oscuro para focus/hover */
+  --color-secundario: #0056b3;
+  /* Un azul más oscuro para focus/hover */
 }
 
 .navbar {
@@ -22,13 +23,21 @@
   /* Sombra suave */
 }
 
+.navbar-logo {
+  display: flex; /* Added for mobile toggle alignment */
+  align-items: center; /* Added for mobile toggle alignment */
+  justify-content: space-between; /* Added for mobile toggle alignment */
+  width: 100%; /* Added for mobile toggle alignment */
+}
+
+
 .navbar-logo img {
   height: 50px;
 }
 
 .navbar-links {
   list-style: none;
-  display: flex;
+  display:flex;
   align-items: center;
   gap: 1.5rem;
   padding: 0 1rem;
@@ -38,8 +47,9 @@
   text-decoration: none;
   color: #333;
   /* Cambié el color del texto a un gris oscuro para mejor contraste */
-  font-weight: 500;
+  font-weight:500;
   transition: color 0.3s ease;
+;
 }
 
 .navbar-links li a:hover {
@@ -84,11 +94,8 @@
   padding: 0;
   margin: 0;
   border-radius: 4px;
-  /* *** Depuración: Quita overflow:hidden TEMPORALMENTE para ver si el submenu se sale *** */
-  /* overflow: hidden;/* Quita esta línea para depurar */
-
-  /* *** Depuración: Borde visible para el menú principal *** */
-  border: 2px solid red !important;
+  /* Removed overflow: hidden for debugging, it can be added back if needed */
+  /* border: 2px solid red !important; /* Debugging border, remove in production */
 }
 
 .dropdown-menu .submenu-trigger {
@@ -124,114 +131,112 @@
 .submenu {
   position: absolute;
   top: 0;
-  /* *** Depuración: Prueba con un 'left' que sabes que lo hará visible *** */
-  left: calc(-95% + 2px) !important; /* Si tu min-width es 200px, 200px a la derecha debería funcionar */
-  /* left: 100%; */ /* Comenta esta línea */
-  /* left: calc(100% - 2px); */ /* Comenta esta línea */
-
+  left: calc(-95% + 2px) ; /* Changed to ensure it appears to the right on desktop */
   background-color: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  /* *** Depuración: Aumenta el z-index si crees que algo lo cubre *** */
-  z-index: 9999 !important; /* Asegura que esté por encima de todo */
-
+  z-index: 1001; /* Increased z-index to be above dropdown-menu */
   min-width: 180px;
   list-style: none;
   padding: 0;
   margin: 0;
   border-radius: 4px;
-  overflow: hidden; /* Mantener overflow en el submenu para sus propios contenidos */
+  overflow: hidden;
 
-  /* *** Depuración: Borde visible y fondo llamativo para el submenú *** */
-  border: 2px solid blue !important;
-  background-color: lightblue !important; /* Cambia el color para que sea obvio */
+  /* Debugging borders and background, remove in production */
+  /* border: 2px solid blue !important; */
+  /* background-color: lightblue !important; */
 }
+
+
+/* Hamburger icon for mobile */
+.navbar-toggle {
+  display: none; /* Hidden by default, shown on mobile */
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--color-texto);
+}
+
 
 /* --- Media Queries --- */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start; /* Align items to the start for better mobile stacking */
     padding: 1rem;
   }
 
   .navbar-logo {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0; /* No margin-bottom needed as width is 100% */
+  }
+
+  .navbar-toggle {
+    display: block; /* Show hamburger icon on mobile */
   }
 
   .navbar-links {
     flex-direction: column;
-    align-items: center;
     width: 100%;
-    padding: 0.5rem 0;
-    gap: 0.5rem;
+    gap: 0; /* Remove gap for cleaner stacked links */
+    padding: 0;
+    display: none; /* Hidden by default, shown when active */
+  }
+
+  .navbar-links.active {
+    display: flex; /* Show when active */
   }
 
   .navbar-links li {
     width: 100%;
-    text-align: center;
+    text-align: left; /* Align text to the left */
   }
 
-  /* Estilos para el ícono de hamburguesa (puedes usar una librería de íconos) */
-  .navbar-toggle {
-    display: block;
-    cursor: pointer;
-    color: #333;
-    font-size: 1.5rem;
-    padding: 0.5rem;
-  }
-
-  .navbar-links.active {
-    display: flex;
-  }
-
-  .navbar-links.hidden {
-    display: none;
-  }
-
-  /* Ajustes para los menús desplegables en móvil */
-  .navbar-links li.dropdown {
-    width: 100%; /* Ocupa todo el ancho en móvil */
-  }
-
+  .navbar-links li a,
   .dropdown-trigger {
+    padding: 10px 15px; /* Consistent padding for all links/triggers */
+    width: 100%; /* Full width for better touch targets */
+    box-sizing: border-box; /* Include padding in the element's total width */
+  }
+
+  /* Adjustments for dropdowns in mobile */
+  .navbar-links li.dropdown {
     width: 100%;
-    text-align: center;
-    padding: 10px 0; /* Ajustar padding para centrar */
   }
 
   .dropdown-menu {
-    position: static; /* Cambia a posición estática para fluir con el contenido */
-    width: 100%;
-    box-shadow: none; /* Elimina la sombra en móvil */
-    border-top: 1px solid #eee; /* Separador sutil */
-    border-radius: 0; /* Sin bordes redondeados en móvil */
-    /* *** Depuración: Mantén el borde en móvil para ver si aparece *** */
-    border: 2px dashed green !important;
-  }
-
-  .dropdown-menu .submenu-trigger {
-    padding-left: 30px; /* Indentación para sub-opciones */
-    justify-content: flex-start; /* Alinea a la izquierda */
-  }
-
-  .dropdown-menu a {
-    padding-left: 30px; /* Indentación para opciones */
-    text-align: left;
-  }
-
-  .submenu {
-    position: static; /* Cambia a posición estática */
+    position: static; /* Stack dropdown items vertically */
     width: 100%;
     box-shadow: none;
     border-top: 1px solid #eee;
     border-radius: 0;
-    padding-left: 20px; /* Indentación adicional para el sub-menú */
-    /* *** Depuración: Mantén el borde y fondo en móvil *** */
-    border: 2px dotted orange !important;
-    background-color: lightcoral !important;
+    /* Debugging border, remove in production */
+    /* border: 2px dashed green !important; */
+  }
+
+  .dropdown-menu .submenu-trigger {
+    padding-left: 30px; /* Indent submenu trigger */
+    justify-content: flex-start;
+  }
+
+  .dropdown-menu a {
+    padding-left: 30px; /* Indent sub-items within dropdown */
+    text-align: left;
+  }
+
+  .submenu {
+    position: static; /* Stack submenu items vertically */
+    width: 100%;
+    box-shadow: none;
+    border-top: 1px solid #eee;
+    border-radius: 0;
+    padding-left: 20px; /* Further indent for submenu items */
+    /* Debugging border and background, remove in production */
+    /* border: 2px dotted orange !important; */
+    /* background-color: lightcoral !important; */
   }
 
   .submenu a {
-    padding-left: 40px; /* Indentación para las opciones del sub-menú */
+    padding-left: 40px; /* Deeper indentation for submenu links */
   }
 }

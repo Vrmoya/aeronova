@@ -1,72 +1,122 @@
-.about {
-    
-    background-image: url("../../public/images/LOGO.png");
-        background-size:contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        opacity: 0.9;
+:root {
+  --color-primario: #1E3A8A;
+  --color-secundario: #38BDF8;
+  --color-fondo: #F0F9FF;
+  --color-texto: #333333;
+  --fuente-principal: 'Arial', sans-serif;
+  --fuente-secundaria: "Lora", serif;
+}
 
-    color: var(--color-texto);
-    padding: 3rem 2rem;
-    height: auto;
-    width: 70%;
-  }
-  
-  .about h3 {
-    font-family: var(--fuente-principal);
-    font-weight: bold;
-    font-size: 1.5rem;
-    color: #1e3a8a;
-    margin-bottom: 2rem;
-    text-align: left;
-  }
-  
-  .about-container {
-    display: flex;
-    flex-direction: column;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  .about p {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 2rem;
-    line-height: 1.6;
-    text-align:justify;
-    margin-bottom: 2.5rem;
-  }
-  .about p, li {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.1rem;
-    line-height: 1.6;
-    text-align: left;
-    
-  }
-  
-.about p, h1, h3, li {
-  color: black; /* Establece el color del texto a negro */
-  text-shadow: 
-    -1px -1px 0 white,  
-     1px -1px 0 white,
-    -1px  1px 0 white,
-     1px  1px 0 white; /* Crea un "borde" blanco alrededor del texto */
+.about {
+  /* No background-image directly here, moved to ::before */
+  color: var(--color-texto);
+  padding: 3rem 2rem;
+  height: auto;
+  width: 70%; /* Default width for larger screens */
+  position: relative; /* For pseudo-element positioning */
+  margin: 0 auto; /* Center the block */
+  box-sizing: border-box; /* Include padding in width */
+  text-align: left; /* Default text alignment */
+}
+
+/* Pseudo-element for background image with opacity */
+.about::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/LOGO.png");
+  background-size: contain; /* or 'cover' depending on desired fill */
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.2; /* Adjust this value for desired transparency of the image */
+  z-index: -1;
 }
 
 .about h3 {
+  font-family: var(--fuente-principal);
+  font-weight: bold;
+  font-size: 1.5rem; /* Use rem */
+  color: #1e3a8a;
+  margin-bottom: 2rem;
   margin-top: 4rem;
-  margin-bottom: 1rem;
+  text-align: left;
+  word-wrap: break-word;
+
 }
-  
-  /* Media Queries */
-  @media (max-width: 768px) {
-    .about {
-      padding: 2rem 1rem;
-    }
-  
-    .about h3 {
-      font-size: 1.3rem;
-    }
-  
-    .about p {
-      font-size: 2rem;
-    }
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  margin: 0 auto; /* Center the content within the .about block */
+}
+
+.about p {
+  font-family: var(--fuente-principal); /* Changed to primary font from Arial */
+  font-size: 1.2rem; /* Adjusted to be consistent with others, was 2rem which is very large */
+  line-height: 1.6;
+  text-align: justify;
+  margin-bottom: 1.5rem; /* Adjusted margin */
+  word-wrap: break-word;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.about li {
+  font-family: var(--fuente-principal); /* Changed to primary font from Arial */
+  font-size: 1.1rem; /* Adjusted to be consistent */
+  line-height: 1.6;
+  text-align: left;
+  margin-bottom: 0.5rem; /* Added margin for list items */
+  word-wrap: break-word;
+}
+
+/* Media Queries for About.css */
+
+/* For tablets and smaller desktops */
+@media (max-width: 1024px) {
+  .about {
+    width: 85%; /* Increase width for tablets */
+    padding: 2.5rem 1.5rem;
   }
+  .about h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+  }
+  .about p, .about li {
+    font-size: 1rem;
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+  .about {
+    width: 95%; /* Take almost full width on mobile */
+    padding: 2rem 1rem;
+    text-align: left; /* Ensure consistent text alignment */
+  }
+  .about h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+  .about p, .about li {
+    font-size: 0.95rem;
+    text-align: justify; /* Maintain justify or set to left */
+  }
+}
+
+/* For very small mobile devices */
+@media (max-width: 480px) {
+  .about {
+    padding: 1.5rem 0.8rem;
+  }
+  .about h3 {
+    font-size: 1.2rem;
+  }
+  .about p, .about li {
+    font-size: 0.9rem;
+  }
+}

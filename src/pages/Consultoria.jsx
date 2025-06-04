@@ -6,7 +6,7 @@ import { Carousel } from "react-responsive-carousel";
 export const Consultoria = () => {
   return (
     <div className="consultoria">
-      <h1>Consultoria</h1>
+      <h1>CONSULTORIA</h1>
 
       <Carousel
         showThumbs={false}

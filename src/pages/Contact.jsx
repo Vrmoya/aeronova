@@ -36,7 +36,7 @@ export const Contact = () => {
   };
 
   return (
-    <div className="contact">
+    <div className="contacto">
       <h2>Contacto</h2>
       {/* Es importante vincular los inputs con el estado usando 'value' y 'onChange' */}
       <fieldset>
@@ -64,7 +64,7 @@ export const Contact = () => {
         <textarea
           name="textarea" // Aunque no lo enviaremos a un backend, 'name' es una buena práctica
           rows="10"
-          cols="50"
+          cols="45"
           value={consulta}
           onChange={(e) => setConsulta(e.target.value)}
           placeholder="Escriba su consulta aquí..." // Usar placeholder es mejor que texto dentro de textarea
