@@ -10,7 +10,7 @@ import { Carousel } from "react-responsive-carousel";
 
 import heli2 from "../images/HELI/heli2.jpg";
 import heli3 from "../images/HELI/heli3.jpg";
-import heli4 from "../images/HELI/heli4.jpg";
+
 import heli5 from "../images/HELI/heli5.jpg";
 import heli6 from "../images/HELI/heli6.jpg";
 import heli7 from "../images/HELI/heli7.jpeg"; // Nota: si tienes .jpeg en otros, ajusta la extensión
@@ -39,9 +39,6 @@ export const Helipuertos = () => {
         </div>
         <div>
           <img src={heli3} alt="Helipuerto 3" />
-        </div>
-        <div>
-          <img src={heli4} alt="Helipuerto 4" />
         </div>
         <div>
           <img src={heli5} alt="Helipuerto 5" />

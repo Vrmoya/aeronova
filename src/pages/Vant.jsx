@@ -40,17 +40,17 @@ export const Vant = () => {
       <h3>Realizamos:</h3>
       <ul>
         <li>
-          Estudios de Fotogrametria.
+          Estudios de Fotogrametría.
         </li>
         <li>
-          Creacion de Modelo Digital de Terreno (MDT) y Modelo Digital de Elevaciones (MDT).
+          Creación de Modelo Digital de Terreno (MDT) y Modelo Digital de Elevaciones (MDT).
         </li>
 
         <li>
-          Generacion de curvas de nivel.
+          Generación de curvas de nivel.
         </li>
         <li>
-          Confeccion de planos topograficos.
+          Confección de planos topográficos.
         </li>
         <li>
           Elaboración de mosaicos fotográficos.

@@ -16,7 +16,7 @@ export const Home = () => {
   return (
     <div className="home">
       <h2>Bienvenidos</h2>
-      <h1>Aeronova Consultora Aeronautica</h1>
+      <h1>Aeronova Consultora Aeronáutica</h1>
 
       <Carousel
         showThumbs={false}
@@ -44,7 +44,7 @@ export const Home = () => {
             <div className="contenedor carousel-item">
               <img src={aerodromos} alt="aerodromo" />
               <div className="texto">
-                <h3>AERODROMO</h3>
+                <h3>AERODROMOS</h3>
                 <p>
                   Un aeródromo es una zona definida, en tierra o agua, que
                   incluye edificios, instalaciones y equipos, destinada a ser

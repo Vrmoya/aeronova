@@ -28,8 +28,8 @@ export const Consultoria = () => {
         <li>Estudios aeronáuticos para establecer normas particulares</li>
         <li>Estudios ambientales.</li>
         <li>Mediciones y Planos.</li>
-        <li>Asesoria Legal Tecnica</li>
-        <li>Diseño de control de Transito en tierra.</li>
+        <li>Asesoría Legal Técnica</li>
+        <li>Diseño de control de Tránsito en tierra.</li>
         <li>Sistemas de señalizacion y navegación</li>
         <li>Cartografía personalizada para aeroclubes.</li>
       </ul>

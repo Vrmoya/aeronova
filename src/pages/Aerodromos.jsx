@@ -32,7 +32,7 @@ export const Aerodromos = () => {
         </div>
       </Carousel>
 
-      <h3>Realizamos proyectos publicos y/o privados:</h3>
+      <h3>Realizamos proyectos públicos y/o privados:</h3>
       <ul>
         <li>
           Estudios de factibilidad, proyecto ejecutivo, confección de la
