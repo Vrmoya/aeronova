@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/Consultoria.css";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
-
+import consultoria from "../images/DRONES/consultoria.jpeg";
 export const Consultoria = () => {
   return (
     <div className="consultoria">
@@ -16,7 +16,7 @@ export const Consultoria = () => {
         className="carousel"
       >
         <div>
-          <img src="../images/DRONES/consultoria.jpeg" alt="pista con luces" />
+          <img src={consultoria} alt="pista con luces" />
         </div>
         
       </Carousel>

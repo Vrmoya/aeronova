@@ -6,7 +6,7 @@
   /* width: 80%; */ /* Removed fixed width, will use max-width and margin auto */
   max-width: 1200px; /* Limit overall width on large screens */
   margin: 0 auto; /* Center the contacto section */
-  background-image: url("../../images/LOGO.png");
+  background-image: url("/src/images/LOGO.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;

@@ -2,6 +2,9 @@ import React from "react";
 import "../styles/CArtografia.css";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
+import cartografia1 from "../images/CARTO/CARTO1.jpeg";
+import cartografia2 from "../images/CARTO/CARTO2.jpeg";
+import cartografia3 from "../images/CARTO/CARTO3.jpeg";
 
 export const Cartografia = () => {
   return (
@@ -16,13 +19,13 @@ export const Cartografia = () => {
         className="carousel"
       >
         <div>
-          <img src="../images/CARTO/CARTO1.jpeg" alt="carto 1" />
+          <img src={cartografia1} alt="carto 1" />
         </div>
         <div>
-          <img src="../images/CARTO/CARTO2.jpeg" alt="carto 2" />
+          <img src={cartografia2} alt="carto 2" />
         </div>
         <div>
-          <img src="../images/CARTO/CARTO3.jpeg" alt="carto 3" />
+          <img src={cartografia3} alt="carto 3" />
         </div>
         
       </Carousel>
