@@ -26,7 +26,7 @@ export const About = () => {
         Nuestra MISION es brindar soluciones innovadoras, asegurando precisión,
         seguridad y eficiencia en cada proyecto, brindando un servicio
         económicamente viable. Por eso nos esforzamos por contar con las
-        capacidades necesarias para ofrecer respuesta adecuadas, con el objeto
+        capacidades necesarias para ofrecer respuestas adecuadas, con el objeto
         de acompañar la evolución del sector aeronáutico. Tenemos a su
         disposición equipos certificados y homologados, calibrados para uso
         aeronáutico. Nos enfocamos en brindar soluciones ágiles, seguras y
