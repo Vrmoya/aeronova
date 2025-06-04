@@ -11,7 +11,7 @@ import drone5 from "../images/DRONES/Drone_6.jpeg";
 export const Vant = () => {
   return (
     <div className="vant">
-      <h1>Vant (Vehiculo Aereo No Tripulado)</h1>
+      <h1>Vant (Vehículo Aereo No Tripulado)</h1>
       <Carousel
         showThumbs={false}
         autoPlay
